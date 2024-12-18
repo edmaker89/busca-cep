@@ -52,8 +52,8 @@ export default function App() {
         />
       </View>
       <View style={styles.areaBtn}>
-        <TouchableOpacity style={[styles.btn, {backgroundColor: '#4287f5'}]}
-          onPress={buscar}
+        <TouchableOpacity style={[styles.btn, {backgroundColor: '#4287f5'}, cep.length < 8 ? {opacity: 0.5, backgroundColor: '#2c3e50'} : {opacity: 1}]}
+          onPress={buscar} disabled={cep.length < 8}
         >
           <Text style={styles.textBtn}>Buscar</Text>
         </TouchableOpacity>
